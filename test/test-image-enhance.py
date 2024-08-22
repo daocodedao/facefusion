@@ -30,7 +30,7 @@ srcImage = "resource/851724224941.jpg"
 # if run.returncode == 0:
 pythonPath = f"venv/bin/python"
 cmd = f"{pythonPath} run.py \
---frame-processors frame_enhancer \
+--frame-processors frame_enhancer,face_enhancer \
 --frame-enhancer-model real_esrgan_x4 \
 --target {srcImage} \
 --output {dstImage} \
