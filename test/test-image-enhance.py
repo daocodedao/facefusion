@@ -4,7 +4,7 @@ import sys, os
 
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from utils.logger_settings import api_logger
-
+from utils.util import Util
 
 processId = str(int(time.time()))
 OUTPUT_DIR="out/"
@@ -38,6 +38,7 @@ cmd = f"{pythonPath} run.py \
 api_logger.info(cmd)
 
 result = subprocess.check_output(cmd, shell=True)
+Util.log_subprocess_output(result)
 
 if os.path.exists(dstImage):
     api_logger.info(
