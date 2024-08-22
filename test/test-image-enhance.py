@@ -7,9 +7,9 @@ from utils.logger_settings import api_logger
 
 
 processId = str(int(time.time()))
-OUTPUT_DIR=f"out/"
+OUTPUT_DIR="out/"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
-dstImage = f"out/{processId}.jpg"
+dstImage = f"{OUTPUT_DIR}{processId}.jpg"
 
 frameEnchanceModel = "frame_enhancer"
 srcImage = "resource/851724224941.jpg"
