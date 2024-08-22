@@ -1,6 +1,7 @@
 import subprocess
 import sys
 import pytest
+import unittest
 
 # import 路径修改
 import sys, os
@@ -34,3 +35,6 @@ def test_colorize_frame_to_video() -> None:
 
 	assert run.returncode == 0
 	assert 'video succeed' in run.stdout.decode()
+
+if __name__ == '__main__':
+    unittest.main()
