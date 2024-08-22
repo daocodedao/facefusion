@@ -39,8 +39,7 @@ api_logger.info(cmd)
 
 result = subprocess.check_output(cmd, shell=True)
 
-
-if result.returncode == 0:
+if os.path.exists(dstImage):
     api_logger.info(
         f"上传合成后的图片到OSS，OUTPUT_PATH: {dstImage}, processId: {processId}"
     )
@@ -49,4 +48,4 @@ if result.returncode == 0:
     uploadResult = taskBase.uploadFileToTos(
         dstImage, processId, videoTypeStr=taskBase.VideoTaskType.Roop.value
     )
-print(run)
+# print(run)
