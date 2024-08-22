@@ -6,8 +6,8 @@ sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from utils.logger_settings import api_logger
 
 
-processId = int(time.time())
-dstImage = f"out/333.jpg"
+processId = str(int(time.time()))
+dstImage = f"out/{processId}.jpg"
 srcImage = "resource/851724224941.jpg"
 commands = [
     sys.executable,
