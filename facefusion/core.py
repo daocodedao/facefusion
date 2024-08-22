@@ -32,15 +32,15 @@ onnxruntime.set_default_logger_severity(3)
 warnings.filterwarnings('ignore', category = UserWarning, module = 'gradio')
 
 
-def getProxy():
-	import platform
-	if platform.system() == "Linux":
-		return "192.168.0.77:18808"
-	else:
-		return "127.0.0.1:10809"
+# def getProxy():
+# 	import platform
+# 	if platform.system() == "Linux":
+# 		return "192.168.0.77:18808"
+# 	else:
+# 		return "127.0.0.1:10809"
 
-os.environ['HTTP_PROXY'] = getProxy()
-os.environ['HTTPS_PROXY'] = getProxy()
+# os.environ['HTTP_PROXY'] = getProxy()
+# os.environ['HTTPS_PROXY'] = getProxy()
 
 def cli() -> None:
 	signal.signal(signal.SIGINT, lambda signal_number, frame: destroy())
