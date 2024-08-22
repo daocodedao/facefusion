@@ -28,8 +28,8 @@ srcImage = "resource/851724224941.jpg"
 # ]
 # run = subprocess.run(commands, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 # if run.returncode == 0:
-
-cmd = f"sys.executable run.py \
+pythonPath = f"venv/bin/python"
+cmd = f"{pythonPath} run.py \
 --frame-processors frame_enhancer \
 --frame-enhancer-model real_esrgan_x4 \
 --target {srcImage} \
