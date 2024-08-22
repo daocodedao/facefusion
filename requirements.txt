@@ -1,3 +1,5 @@
+--extra-index-url https://download.pytorch.org/whl/cu118
+
 filetype==1.2.0
 gradio==3.50.2
 numpy==1.26.4
