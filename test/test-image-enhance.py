@@ -8,7 +8,6 @@ processId = int(time.time())
 srcImage="resource/851724224941.jpg"
 dstImage=f"out/{processId}.jpg"
 
-
 commands = [ sys.executable, 
             'run.py', 
             '--frame-processors', 
