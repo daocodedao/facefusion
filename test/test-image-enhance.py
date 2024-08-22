@@ -7,7 +7,11 @@ from utils.logger_settings import api_logger
 
 
 processId = str(int(time.time()))
+OUTPUT_DIR=f"out/"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
 dstImage = f"out/{processId}.jpg"
+
+
 srcImage = "resource/851724224941.jpg"
 commands = [
     sys.executable,
