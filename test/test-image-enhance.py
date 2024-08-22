@@ -11,13 +11,15 @@ OUTPUT_DIR=f"out/"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 dstImage = f"out/{processId}.jpg"
 
-
+frameEnchanceModel = "frame_enhancer"
 srcImage = "resource/851724224941.jpg"
 commands = [
     sys.executable,
     "run.py",
     "--frame-processors",
     "frame_enhancer",
+    "--frame-enhancer-model",
+    "real_esrgan_x4"
     "-t",
     f"{srcImage}",
     "-o",
