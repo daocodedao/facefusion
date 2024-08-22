@@ -19,7 +19,7 @@ commands = [
     "--frame-processors",
     "frame_enhancer",
     "--frame-enhancer-model",
-    "real_esrgan_x4 "
+    "real_esrgan_x4",
     "-t",
     f"{srcImage}",
     "-o",
