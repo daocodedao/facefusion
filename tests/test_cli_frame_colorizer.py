@@ -2,6 +2,10 @@ import subprocess
 import sys
 import pytest
 
+# import 路径修改
+import sys, os
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+
 from facefusion.download import conditional_download
 
 
