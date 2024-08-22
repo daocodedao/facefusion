@@ -5,3 +5,6 @@ venv/
 __pycache__/
 out/
 Tos.py
+
+
+logs/
