@@ -13,7 +13,8 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 targetPath = "resource/target-240p.mp4"
 srcPath = "resource/source.jpg"
-outPath = f"{OUTPUT_DIR}{processId}.{os.path.splitext(targetPath)}"
+file_name, file_extension = os.path.splitext(targetPath)
+outPath = f"{OUTPUT_DIR}{processId}.{file_extension}"
 
 
 pythonPath = f"venv/bin/python"
