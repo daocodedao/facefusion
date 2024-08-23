@@ -14,12 +14,12 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 targetPath = "resource/target-240p.mp4"
 srcPath = "resource/source.jpg"
 file_name, file_extension = os.path.splitext(targetPath)
-outPath = f"{OUTPUT_DIR}{processId}.{file_extension}"
+outPath = f"{OUTPUT_DIR}{processId}{file_extension}"
 
 
 pythonPath = f"venv/bin/python"
 cmd = f"{pythonPath} run.py \
---frame-processors face_swapper face_enhancer \
+--frame-processors face_swapper, face_enhancer \
 --frame-enhancer-model real_esrgan_x4 \
 --execution-device-id 0 \
 --source {srcPath} \
