@@ -22,7 +22,6 @@ cmd = f"{pythonPath} run.py \
 --frame-processors face_swapper face_enhancer \
 --frame-enhancer-model real_esrgan_x4 \
 --execution-device-id 0 \
---execution-providers gpu \
 --source {srcPath} \
 --target {targetPath} \
 --output {outPath} \
